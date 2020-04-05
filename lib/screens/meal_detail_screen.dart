@@ -5,10 +5,10 @@ import '../dummy_data.dart';
 class MealDetailScreen extends StatelessWidget {
   static const routeName = '/meal-detail';
 
-  final Function toggelFavortite;
+  final Function toggleFavortite;
   final Function isFavortite;
 
-  MealDetailScreen(this.toggelFavortite, this.isFavortite);
+  MealDetailScreen(this.toggleFavortite, this.isFavortite);
 
   Widget buildSectionTitle(BuildContext context, String text) {
     return Container(
@@ -101,7 +101,7 @@ class MealDetailScreen extends StatelessWidget {
         child: Icon(
           isFavortite(mealId) ? Icons.star : Icons.star_border,
         ),
-        onPressed: () => toggelFavortite(mealId),
+        onPressed: () => toggleFavortite(mealId),
       ),
     );
   }
